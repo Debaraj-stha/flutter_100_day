@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hundred_day/day1/flutterIsolate.dart';
+import 'package:hundred_day/day2/home/ui/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,26 +64,34 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const FlutterIsolate()));
-              },
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.greenAccent),
-                child: Text(
-                  "Isolate day 1",
-                  style: style,
-                ),
-              ),
-            )
+            buildButton(
+                context,
+                MaterialPageRoute(builder: (context) => const FlutterIsolate()),
+                "Isolate day 1"),
+            buildButton(
+                context,
+                MaterialPageRoute(builder: (context) => const HomePage()),
+                "Bloc day 2")
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildButton(
+      BuildContext context, MaterialPageRoute route, String text) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(context, route);
+      },
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: Colors.greenAccent),
+        child: Text(
+          text,
+          style: style,
         ),
       ),
     );
