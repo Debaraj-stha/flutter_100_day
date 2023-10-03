@@ -31,7 +31,7 @@ class WishListBloc extends Bloc<WishListEvent, WishListState> {
     int id = event.id;
     print(id);
     wishlistData.removeWhere((ele) => ele.id == id);
-    emit(DeleteButtonClickedState());
+    emit(WishListDateLoadedState(data: wishlistData));
     print("deleted");
   }
 }

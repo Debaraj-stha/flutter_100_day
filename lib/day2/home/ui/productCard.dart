@@ -52,12 +52,14 @@ class ProductCard extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        bloc.add(HomeProductWishListButtonClickedEvent(productData: data));
+                        bloc.add(HomeProductWishListButtonClickedEvent(
+                            productData: data, id: data.id));
                       },
                       icon: const Icon(Icons.favorite_border)),
                   IconButton(
                       onPressed: () {
-                        bloc.add(HomeProductCartButtonClickedEvent(productData: data));
+                        bloc.add(HomeProductCartButtonClickedEvent(
+                            productData: data, id: data.id));
                       },
                       icon: const Icon(Icons.shopping_cart))
                 ],

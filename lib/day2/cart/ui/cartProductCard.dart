@@ -53,8 +53,7 @@ class CartProductCard extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        // bloc.add(HomeProductWishListButtonClickedEvent(
-                        // productData: data));
+                        bloc.add(CartRemoveFromCartEvent(id: data.id));
                       },
                       icon: Container(
                         width: 30,

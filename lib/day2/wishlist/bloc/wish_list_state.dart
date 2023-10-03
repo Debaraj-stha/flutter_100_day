@@ -7,9 +7,7 @@ abstract class WishListActionState extends WishListState {}
 
 final class WishListInitial extends WishListState {}
 
-class DeleteButtonClickedState extends WishListActionState {
-  
-}
+class DeleteButtonClickedState extends WishListActionState {}
 
 class WishListDateLoadedState extends WishListState {
   final List<ProductData> data;
@@ -18,3 +16,9 @@ class WishListDateLoadedState extends WishListState {
 }
 
 class WishListLoadingErrorState extends WishListState {}
+
+class ItemAlreadyWishlistedState extends WishListActionState {
+  final int id;
+
+  ItemAlreadyWishlistedState({required this.id});
+}

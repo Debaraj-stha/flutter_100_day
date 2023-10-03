@@ -5,6 +5,8 @@ sealed class CartBlocState {}
 
 class CartActionState extends CartBlocState {}
 
+class CartDeleteItemClickedState extends CartActionState {}
+
 final class CartBlocInitialState extends CartBlocState {}
 
 class CartErrorState extends CartBlocState {}

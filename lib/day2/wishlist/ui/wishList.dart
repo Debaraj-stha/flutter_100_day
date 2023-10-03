@@ -28,9 +28,7 @@ class _WishListState extends State<WishList> {
       body: BlocConsumer<WishListBloc, WishListState>(
         bloc: bloc,
         listenWhen: (previous, current) => current is WishListActionState,
-        buildWhen: (previous, current) =>
-            current is! WishListActionState ||
-            current is DeleteButtonClickedState,
+        buildWhen: (previous, current) => current is! WishListActionState,
         listener: (context, state) {
           if (state is DeleteButtonClickedState) {
             ScaffoldMessenger.of(context).showSnackBar(

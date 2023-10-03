@@ -15,6 +15,7 @@ class CartBlocBloc extends Bloc<CartBlocEvent, CartBlocState> {
       // TODO: implement event handler
     });
     on<CartInitialEvent>(cartInitialEvent);
+    on<CartRemoveFromCartEvent>(cartRemoveFromCartEvent);
   }
 
   FutureOr<void> cartInitialEvent(
@@ -26,5 +27,13 @@ class CartBlocBloc extends Bloc<CartBlocEvent, CartBlocState> {
     } catch (e) {
       emit(CartErrorState());
     }
+  }
+
+  FutureOr<void> cartRemoveFromCartEvent(
+      CartRemoveFromCartEvent event, Emitter<CartBlocState> emit) {
+    emit(CartDeleteItemClickedState());
+    int id = event.id;
+    cartList.removeWhere((element) => element.id == id);
+    emit(CartSuccessState(data: cartList));
   }
 }

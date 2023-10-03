@@ -37,11 +37,57 @@ class _HomePageState extends State<HomePage> {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const WishList()));
         } else if (state is HomeItemAddedToWishListState) {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text("Item added to wishlist successfully")));
+          final msg = state;
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(
+              msg.message,
+              style: const TextStyle(fontSize: 18, color: Colors.black),
+            ),
+            closeIconColor: Colors.black,
+            showCloseIcon: true,
+            backgroundColor: Colors.greenAccent,
+            dismissDirection: DismissDirection.startToEnd,
+          ));
         } else if (state is HomeItemAddToCartState) {
-          ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text("Item added to cart successfully")));
+          final msg = state;
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(
+              msg.message,
+              style: const TextStyle(fontSize: 18, color: Colors.black),
+            ),
+            backgroundColor: Colors.greenAccent,
+            showCloseIcon: true,
+            dismissDirection: DismissDirection.startToEnd,
+            closeIconColor: Colors.black,
+          ));
+        } else if (state is ItemAlreadyCartedState) {
+          final msg = state;
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 1),
+            elevation: 0,
+            dismissDirection: DismissDirection.startToEnd,
+            content: Text(
+              msg.message,
+              style: const TextStyle(fontSize: 18),
+            ),
+            showCloseIcon: true,
+            closeIconColor: Colors.white,
+          ));
+        } else if (state is ItemAlreadyWishlistedState) {
+          final msg = state;
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 1),
+            elevation: 0,
+            dismissDirection: DismissDirection.startToEnd,
+            content: Text(
+              msg.message,
+              style: const TextStyle(fontSize: 18),
+            ),
+            showCloseIcon: true,
+            closeIconColor: Colors.white,
+          ));
         }
       },
       builder: (context, state) {
