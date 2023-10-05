@@ -4,6 +4,8 @@ import 'package:hundred_day/day2/home/ui/home.dart';
 import 'package:hundred_day/day3/parallexEffect.dart';
 import 'package:hundred_day/day3/parallexEffect1.dart';
 
+import 'package:hundred_day/day4/animatedTab.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -76,8 +78,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Bloc day 2"),
             buildButton(
                 context,
-                MaterialPageRoute(builder: (context) => const ParallexEffect1()),
-                "parallex Effect day 3")
+                MaterialPageRoute(
+                    builder: (context) => const ParallexEffect1()),
+                "parallex Effect day 3"),
+            buildButton(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const AnimatedListTab()),
+                "Animated tab day 4")
           ],
         ),
       ),
