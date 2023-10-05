@@ -5,6 +5,7 @@ import 'package:hundred_day/day3/parallexEffect.dart';
 import 'package:hundred_day/day3/parallexEffect1.dart';
 
 import 'package:hundred_day/day4/animatedTab.dart';
+import 'package:hundred_day/day4/scrollController.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,7 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const AnimatedListTab()),
-                "Animated tab day 4")
+                "Animated tab day 4"),
+                buildButton(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ScrollControllerExample()),
+                "scrollcontrller tab day 4")
           ],
         ),
       ),
