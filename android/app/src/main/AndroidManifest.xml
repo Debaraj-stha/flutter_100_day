@@ -3,6 +3,7 @@
         android:label="hundred_day"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <application android:requestLegacyExternalStorage="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
