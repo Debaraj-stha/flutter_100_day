@@ -8,6 +8,8 @@ import 'package:hundred_day/day4/animatedTab.dart';
 import 'package:hundred_day/day4/scrollController.dart';
 import 'package:hundred_day/day6/dragablwwidget.dart';
 import 'package:hundred_day/day6/photoEditor.dart';
+import 'package:hundred_day/day7/clip.dart';
+import 'package:hundred_day/day7/masoniryGrid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -89,16 +91,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(
                     builder: (context) => const AnimatedListTab()),
                 "Animated tab day 4"),
-                buildButton(
+            buildButton(
                 context,
                 MaterialPageRoute(
                     builder: (context) => const ScrollControllerExample()),
-                "scrollcontrller tab day 4"),
-                 buildButton(
+                "scrollcontrller  day 5"),
+            buildButton(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const PhotoEditor()),
-                "dragable widget tab day 4")
+                MaterialPageRoute(builder: (context) => const PhotoEditor()),
+                "dragable widget  day 6"),
+            buildButton(
+                context,
+                MaterialPageRoute(builder: (context) => MasoniryGrid()),
+                "gridview   day 7"),
+            buildButton(
+                context,
+                MaterialPageRoute(builder: (context) => Clip()),
+                "cuctompath cliper day 7"),
           ],
         ),
       ),
