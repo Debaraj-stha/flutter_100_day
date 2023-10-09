@@ -20,7 +20,8 @@ dependencies:
   image_gallery_saver: ^2.0.3
   permission_handler: ^11.0.1
   flutter_staggered_grid_view:
-
+  google_ml_kit:
+  translator: ^0.1.7
 dev_dependencies:
   flutter_test:
     sdk: flutter

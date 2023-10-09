@@ -10,6 +10,9 @@ import 'package:hundred_day/day6/dragablwwidget.dart';
 import 'package:hundred_day/day6/photoEditor.dart';
 import 'package:hundred_day/day7/clip.dart';
 import 'package:hundred_day/day7/masoniryGrid.dart';
+import 'package:hundred_day/day8/textReconizer.dart';
+
+import 'day8/translater.dart';
 
 void main() {
   runApp(const MyApp());
@@ -69,46 +72,56 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            buildButton(
-                context,
-                MaterialPageRoute(builder: (context) => const FlutterIsolate()),
-                "Isolate day 1"),
-            buildButton(
-                context,
-                MaterialPageRoute(builder: (context) => const HomePage()),
-                "Bloc day 2"),
-            buildButton(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ParallexEffect1()),
-                "parallex Effect day 3"),
-            buildButton(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const AnimatedListTab()),
-                "Animated tab day 4"),
-            buildButton(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ScrollControllerExample()),
-                "scrollcontrller  day 5"),
-            buildButton(
-                context,
-                MaterialPageRoute(builder: (context) => const PhotoEditor()),
-                "dragable widget  day 6"),
-            buildButton(
-                context,
-                MaterialPageRoute(builder: (context) => MasoniryGrid()),
-                "gridview   day 7"),
-            buildButton(
-                context,
-                MaterialPageRoute(builder: (context) => Clip()),
-                "cuctompath cliper day 7"),
-          ],
+      body: SingleChildScrollView(
+        child: Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FlutterIsolate()),
+                  "Isolate day 1"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  "Bloc day 2"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ParallexEffect1()),
+                  "parallex Effect day 3"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedListTab()),
+                  "Animated tab day 4"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ScrollControllerExample()),
+                  "scrollcontrller  day 5"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PhotoEditor()),
+                  "dragable widget  day 6"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => MasoniryGrid()),
+                  "gridview   day 7"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => Clip()),
+                  "cuctompath cliper day 7"),
+                  buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => ReconizeText()),
+                  "Text Reconizer day 8"),
+                   buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => LanguageTranslator()),
+                  "language translator day 8"),
+            ],
+          ),
         ),
       ),
     );
