@@ -11,8 +11,14 @@ import 'package:hundred_day/day6/photoEditor.dart';
 import 'package:hundred_day/day7/clip.dart';
 import 'package:hundred_day/day7/masoniryGrid.dart';
 import 'package:hundred_day/day8/textReconizer.dart';
+import 'package:hundred_day/day9/customInfoWindow.dart';
+import 'package:hundred_day/day9/getLocationFromCord.dart';
+import 'package:hundred_day/day9/placeSearch.dart';
+import 'package:hundred_day/day9/pollygonOnMap.dart';
+import 'package:hundred_day/day9/pollylines.dart';
 
 import 'day8/translater.dart';
+import 'day9/googlemap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,7 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               buildButton(
                   context,
-                  MaterialPageRoute(builder: (context) => const FlutterIsolate()),
+                  MaterialPageRoute(
+                      builder: (context) => const FlutterIsolate()),
                   "Isolate day 1"),
               buildButton(
                   context,
@@ -110,16 +117,45 @@ class _MyHomePageState extends State<MyHomePage> {
                   "gridview   day 7"),
               buildButton(
                   context,
-                  MaterialPageRoute(builder: (context) => Clip()),
+                  MaterialPageRoute(builder: (context) => const Clip()),
                   "cuctompath cliper day 7"),
-                  buildButton(
+              buildButton(
                   context,
-                  MaterialPageRoute(builder: (context) => ReconizeText()),
+                  MaterialPageRoute(builder: (context) => const ReconizeText()),
                   "Text Reconizer day 8"),
-                   buildButton(
+              buildButton(
                   context,
-                  MaterialPageRoute(builder: (context) => LanguageTranslator()),
+                  MaterialPageRoute(
+                      builder: (context) => const LanguageTranslator()),
                   "language translator day 8"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Map()),
+                  "google map day 9"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GetLocationFromCordinate()),
+                  "google map get location from coordinate day 9"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SearchPlace()),
+                  "google map place search day 9"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CustomInfoWindows()),
+                  "Custom info window day 9"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PollygonOnMap()),
+                  "pollygon on map day 9"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PollylineOnMap()),
+                  "Pollyline on map day 9"),
             ],
           ),
         ),

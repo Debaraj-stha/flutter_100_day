@@ -22,6 +22,12 @@ dependencies:
   flutter_staggered_grid_view:
   google_ml_kit:
   translator: ^0.1.7
+  google_maps_flutter:
+  geocoding:
+  geolocator:
+  uuid: ^4.1.0
+  http: ^0.13.6
+  custom_info_window:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -35,3 +41,4 @@ flutter:
     - asset/
     - asset/images/
     - asset/grid/
+    - asset/style/
