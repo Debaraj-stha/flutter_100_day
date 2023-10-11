@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_day/day10/clippath.dart';
 import 'package:hundred_day/day1/flutterIsolate.dart';
 import 'package:hundred_day/day2/home/ui/home.dart';
 import 'package:hundred_day/day3/parallexEffect.dart';
@@ -83,79 +84,83 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const FlutterIsolate()),
+              //     "Isolate day 1"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const HomePage()),
+              //     "Bloc day 2"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const ParallexEffect1()),
+              //     "parallex Effect day 3"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const AnimatedListTab()),
+              //     "Animated tab day 4"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const ScrollControllerExample()),
+              //     "scrollcontrller  day 5"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const PhotoEditor()),
+              //     "dragable widget  day 6"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => MasoniryGrid()),
+              //     "gridview   day 7"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const Clip()),
+              //     "cuctompath cliper day 7"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const ReconizeText()),
+              //     "Text Reconizer day 8"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const LanguageTranslator()),
+              //     "language translator day 8"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const Map()),
+              //     "google map day 9"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const GetLocationFromCordinate()),
+              //     "google map get location from coordinate day 9"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => const SearchPlace()),
+              //     "google map place search day 9"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const CustomInfoWindows()),
+              //     "Custom info window day 9"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const PollygonOnMap()),
+              //     "pollygon on map day 9"),
+              // buildButton(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const PollylineOnMap()),
+              //     "Pollyline on map day 9"),
               buildButton(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const FlutterIsolate()),
-                  "Isolate day 1"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                  "Bloc day 2"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ParallexEffect1()),
-                  "parallex Effect day 3"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const AnimatedListTab()),
-                  "Animated tab day 4"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ScrollControllerExample()),
-                  "scrollcontrller  day 5"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const PhotoEditor()),
-                  "dragable widget  day 6"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => MasoniryGrid()),
-                  "gridview   day 7"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Clip()),
-                  "cuctompath cliper day 7"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ReconizeText()),
-                  "Text Reconizer day 8"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const LanguageTranslator()),
-                  "language translator day 8"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Map()),
-                  "google map day 9"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const GetLocationFromCordinate()),
-                  "google map get location from coordinate day 9"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SearchPlace()),
-                  "google map place search day 9"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const CustomInfoWindows()),
-                  "Custom info window day 9"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PollygonOnMap()),
-                  "pollygon on map day 9"),
-              buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PollylineOnMap()),
-                  "Pollyline on map day 9"),
+                  MaterialPageRoute(builder: (context) => Clippath()),
+                  "clippath day 10"),
             ],
           ),
         ),
