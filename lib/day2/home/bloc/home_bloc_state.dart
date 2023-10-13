@@ -44,3 +44,9 @@ class ItemAlreadyCartedState extends HomeBlocActionState {
 
   ItemAlreadyCartedState({required this.message});
 }
+
+class WishlistItemChangeState extends HomeBlocState {
+  final int itemCount;
+
+  WishlistItemChangeState({required this.itemCount});
+}

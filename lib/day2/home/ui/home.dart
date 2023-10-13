@@ -138,14 +138,34 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       homeBloc.add(HometWishListButtonNavigateClickEvent());
                     },
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Icon(Icons.favorite_outline_outlined),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: 40,
+                          height: 40,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Icon(Icons.favorite_outline_outlined),
+                        ),
+                        Positioned(
+                          right: 0,
+                          top: 0,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                shape: BoxShape.circle, color: Colors.red),
+                            width: 20,
+                            height: 20,
+                            alignment: Alignment.center,
+                            child: const Text(
+                              "0",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   InkWell(

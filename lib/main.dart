@@ -18,6 +18,7 @@ import 'package:hundred_day/day9/placeSearch.dart';
 import 'package:hundred_day/day9/pollygonOnMap.dart';
 import 'package:hundred_day/day9/pollylines.dart';
 
+import 'day11/cubicto.dart';
 import 'day8/translater.dart';
 import 'day9/googlemap.dart';
 
@@ -89,10 +90,10 @@ class _MyHomePageState extends State<MyHomePage> {
               //     MaterialPageRoute(
               //         builder: (context) => const FlutterIsolate()),
               //     "Isolate day 1"),
-              // buildButton(
-              //     context,
-              //     MaterialPageRoute(builder: (context) => const HomePage()),
-              //     "Bloc day 2"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  "Bloc day 2"),
               // buildButton(
               //     context,
               //     MaterialPageRoute(
@@ -161,6 +162,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(builder: (context) => Clippath()),
                   "clippath day 10"),
+                  buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => CubicTo()),
+                  "clippath cubicTo day 11"),
             ],
           ),
         ),

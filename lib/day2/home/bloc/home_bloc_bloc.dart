@@ -46,8 +46,12 @@ class HomeBlocBloc extends Bloc<HomeBlocEvent, HomeBlocState> {
       return false;
     }
     wishlistData.add(event.productData);
+    int itemCount = wishlistData.length;
     emit(HomeItemAddedToWishListState(
-        message: "Item added to wishlist successfully"));
+      message: "Item added to wishlist successfully",
+    ));
+    // emit(WishlistItemChangeState(itemCount: itemCount));
+    print("itemcount: $itemCount");
   }
 
   FutureOr<void> homeProductCartButtonClickedEvent(
@@ -79,5 +83,6 @@ class HomeBlocBloc extends Bloc<HomeBlocEvent, HomeBlocState> {
                 // rating: e[' rating'],
                 id: e['id']))
             .toList()));
+            
   }
 }
