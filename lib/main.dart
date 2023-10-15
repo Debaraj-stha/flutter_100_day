@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hundred_day/day10/clippath.dart';
 import 'package:hundred_day/day1/flutterIsolate.dart';
 import 'package:hundred_day/day12/advancedBloc.dart';
+import 'package:hundred_day/day13/readingAndWritingFile.dart';
 
 import 'package:hundred_day/day2/home/ui/home.dart';
 import 'package:hundred_day/day3/parallexEffect.dart';
@@ -170,8 +171,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   "clippath cubicTo day 11"),
               buildButton(
                   context,
-                  MaterialPageRoute(builder: (context) =>  AdvancedBloc()),
+                  MaterialPageRoute(builder: (context) => const AdvancedBloc()),
                   "Advanced Bloc day 12"),
+              buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ReadingAndWritingFile()),
+                  "reading and writing file"),
             ],
           ),
         ),
