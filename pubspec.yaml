@@ -29,7 +29,8 @@ dependencies:
   http: ^0.13.6
   custom_info_window:
   path_provider: ^2.1.1
-  pdf: ^3.10.4
+  pdf:
+  remove_background:
 dev_dependencies:
   flutter_test:
     sdk: flutter
