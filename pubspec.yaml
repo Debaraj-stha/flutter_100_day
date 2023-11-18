@@ -29,6 +29,7 @@ dependencies:
   http: ^0.13.6
   custom_info_window:
   path_provider: ^2.1.1
+  image_cropper:
   pdf:
   remove_background:
 dev_dependencies:
