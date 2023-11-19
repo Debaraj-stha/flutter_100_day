@@ -32,6 +32,7 @@ dependencies:
   image_cropper:
   pdf:
   remove_background:
+  shared_preferences: ^2.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

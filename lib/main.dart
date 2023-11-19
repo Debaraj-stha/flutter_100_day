@@ -5,6 +5,7 @@ import 'package:hundred_day/day12/advancedBloc.dart';
 import 'package:hundred_day/day13/readingAndWritingFile.dart';
 import 'package:hundred_day/day14/PPSizePhotoMaker.dart';
 import 'package:hundred_day/day15/imagecropper.dart';
+import 'package:hundred_day/day16/sharedpreference.dart';
 
 
 import 'package:hundred_day/day2/home/ui/home.dart';
@@ -192,6 +193,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(
                       builder: (context) => const ImageCrop()),
                   "Cropimage"),
+                        buildButton(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SharedPreferences()),
+                  "Shared preferences"),
 
             ],
           ),
