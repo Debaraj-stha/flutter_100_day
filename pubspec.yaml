@@ -33,6 +33,7 @@ dependencies:
   pdf:
   remove_background:
   shared_preferences: ^2.2.2
+  math_expressions: ^2.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
