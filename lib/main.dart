@@ -7,7 +7,7 @@ import 'package:hundred_day/day14/PPSizePhotoMaker.dart';
 import 'package:hundred_day/day15/imagecropper.dart';
 import 'package:hundred_day/day16/sharedpreference.dart';
 import 'package:hundred_day/day17/calculator.dart';
-
+import 'package:hundred_day/day18/shareFile.dart';
 
 import 'package:hundred_day/day2/home/ui/home.dart';
 import 'package:hundred_day/day3/parallexEffect.dart';
@@ -183,28 +183,30 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(
                       builder: (context) => const ReadingAndWritingFile()),
                   "reading and writing file"),
-                  
-                  buildButton(
+
+              buildButton(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const PPSizePhotoMaker()),
                   "Passport size photo maker"),
-                    buildButton(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ImageCrop()),
-                  "Cropimage"),
-                        buildButton(
+              //   buildButton(
+              // context,
+              // MaterialPageRoute(
+              //     builder: (context) => const ImageCrop()),
+              // "Cropimage"),
+              buildButton(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const SharedPreferences()),
                   "Shared preferences"),
-                    buildButton(
+              buildButton(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const Calculator()),
+                  MaterialPageRoute(builder: (context) => const Calculator()),
                   "Calculator"),
-
+              buildButton(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ShareFile()),
+                  "share file"),
             ],
           ),
         ),
