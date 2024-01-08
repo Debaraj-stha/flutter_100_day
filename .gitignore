@@ -15,6 +15,10 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
+lib/day22
+.idea
+.vscode
+lib/day21
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
