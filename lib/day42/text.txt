@@ -1,0 +1,1 @@
+This is a atest file for  testing if commied to git or not.
