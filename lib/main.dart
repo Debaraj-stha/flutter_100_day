@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:hundred_day/day10/clippath.dart';
 import 'package:hundred_day/day1/flutterIsolate.dart';
+import 'package:hundred_day/day10/clippath.dart';
 import 'package:hundred_day/day12/advancedBloc.dart';
 import 'package:hundred_day/day13/readingAndWritingFile.dart';
 import 'package:hundred_day/day14/PPSizePhotoMaker.dart';
@@ -9,11 +9,9 @@ import 'package:hundred_day/day15/imagecropper.dart';
 import 'package:hundred_day/day16/sharedpreference.dart';
 import 'package:hundred_day/day17/calculator.dart';
 import 'package:hundred_day/day18/shareFile.dart';
-
 import 'package:hundred_day/day2/home/ui/home.dart';
 import 'package:hundred_day/day3/parallexEffect.dart';
 import 'package:hundred_day/day3/parallexEffect1.dart';
-
 import 'package:hundred_day/day4/animatedTab.dart';
 import 'package:hundred_day/day4/scrollController.dart';
 import 'package:hundred_day/day6/dragablwwidget.dart';
@@ -30,10 +28,11 @@ import 'package:hundred_day/day9/pollylines.dart';
 import 'day11/cubicto.dart';
 import 'day8/translater.dart';
 import 'day9/googlemap.dart';
+
 late List<CameraDescription> cameras;
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  cameras=await availableCameras();
+  cameras = await availableCameras();
   runApp(const MyApp());
 }
 
@@ -43,31 +42,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
-          useMaterial3: true,
-          textButtonTheme: TextButtonThemeData(
-              style: ButtonStyle(
-                  textStyle: MaterialStateProperty.all<TextStyle>(
-                    const TextStyle(
-                      color: Colors.white, // Text color for the button
-                      fontSize: 16.0, // Adjust the font size as needed
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+            useMaterial3: true,
+            textButtonTheme: TextButtonThemeData(
+                style: ButtonStyle(
+                    textStyle: MaterialStateProperty.all<TextStyle>(
+                      const TextStyle(
+                        color: Colors.white, // Text color for the button
+                        fontSize: 16.0, // Adjust the font size as needed
+                      ),
                     ),
-                  ),
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.greenAccent),
-                  padding: MaterialStateProperty.all<EdgeInsets>(
-                      const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 15)))),
-          appBarTheme: const AppBarTheme(
-              color: Colors.greenAccent,
-              centerTitle: true,
-              titleTextStyle: TextStyle(
-                  letterSpacing: 2, color: Colors.black, fontSize: 20))),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.greenAccent),
+                    padding: MaterialStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15)))),
+            appBarTheme: const AppBarTheme(
+                color: Colors.greenAccent,
+                centerTitle: true,
+                titleTextStyle: TextStyle(
+                    letterSpacing: 2, color: Colors.black, fontSize: 20))),
+        home: const MyFadeTransition()
   }
 }
 
