@@ -106,6 +106,7 @@ class Clipper3 extends CustomClipper<Path> {
     path.lineTo(width / 2, height);
     path.lineTo(width, height / 2);
     path.close();
+
     return path;
   }
 
