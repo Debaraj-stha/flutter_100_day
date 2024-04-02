@@ -80,3 +80,18 @@
     });
     return completer.future;
   }
+    List<Polyline> polylines = [];
+  addPolylines() {
+    for (var i = 0; i < latLngs.length; i++) {
+      polylines.add(Polyline(
+          polylineId: PolylineId("$i"),
+          color: Colors.red,
+          jointType: JointType.round,
+          onTap: () {
+            Utils.printMessage(latLngs[i]);
+          },
+          visible: true,
+          endCap: Cap.roundCap,
+          points: latLngs));
+    }
+  }
